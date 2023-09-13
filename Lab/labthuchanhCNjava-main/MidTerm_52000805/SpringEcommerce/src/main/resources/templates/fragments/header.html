@@ -1,0 +1,91 @@
+<body>
+<header id="header"><!--header-->
+  <div class="header_top"><!--header_top-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="contactinfo">
+            <ul class="nav nav-pills">
+              <li><a href="#"><i class="fa fa-phone"></i> 091 145 2692</a></li>
+              <li><a href="#"><i class="fa fa-envelope"></i> vanthao000009@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="social-icons pull-right">
+            <ul class="nav navbar-nav">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--/header_top-->
+
+  <div class="header-middle"><!--header-middle-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="logo pull-left">
+            <a href="/home-page"><img th:src="@{/images/home/logo.png}" alt=""  src=""/></a>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="shop-menu pull-right">
+            <ul class="nav navbar-nav">
+              <li><a th:href="@{/check-out}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+              <li><a th:href="@{/cart}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+              <li><a th:href="@{/auth}" th:unless="${session.userLogin != null}"><i class="fa fa-lock"></i> Login</a></li>
+              <li><a th:href="@{/log-out}" th:if="${session.userLogin != null}" ><i class="fa fa-user"></i>[[${session.userLogin.username}]] | <i class="fa fa-sign-out"></i>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--/header-middle-->
+
+  <div class="header-bottom"><!--header-bottom-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="mainmenu pull-left">
+            <ul class="nav navbar-nav collapse navbar-collapse">
+              <li><a th:href="@{/home-page}">Home</a></li>
+              <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                <ul role="menu" class="sub-menu">
+                  <li><a th:href="@{/check-out}">Checkout</a></li>
+                  <li><a th:href="@{/cart}">Cart</a></li>
+                  <li th:if="${session.userLogin != null}"><a th:href="@{/log-out}">Logout</a></li>
+                  <li th:unless="${session.userLogin != null}"><a th:href="@{/auth}">Login</a></li>
+                </ul>
+              </li>
+              <li><a th:href="@{/contact}">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <form th:action="@{/product/search}" th:object="${String}" method="post">
+          <div>
+            <label>
+              <input type="text" name="txtSearch" placeholder="Search"/>
+              <button type="submit"class=" btn btn-default fa fa-search"></button>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div><!--/header-bottom-->
+</header><!--/header-->
+</body>
+</html>

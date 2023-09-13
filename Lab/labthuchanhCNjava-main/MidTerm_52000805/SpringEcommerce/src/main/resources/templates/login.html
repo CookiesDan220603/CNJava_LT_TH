@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<title>Login | E-Shopper</title>
+<head th:replace="~{/fragments/head}">
+</head><!--/head-->
+
+<body>
+<header th:replace="~{/fragments/header}"><!--header-->
+</header><!--/header-->
+<section><!--form-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="login-form"><!--login form-->
+						<h2>Login to your account</h2>
+						<form th:action="@{/auth/login}" th:object="${user}" method="post">
+							<input type="text" id="username" placeholder="Username" th:field="*{username}" />
+							<input type="password" id = "password" placeholder="Password" th:field="*{password}" />
+							<span>
+								<input type="checkbox" id="remember" class="checkbox">
+								Keep me signed in
+							</span>
+							<div th:if="${message}" class="alert alert-danger text-center">
+								[[${message}]]
+							</div>
+							<button type="submit" class="btn btn-default">Login</button>
+						</form>
+					</div><!--/login form-->
+				</div>
+				<div class="col-sm-1">
+					<h2 class="or">OR</h2>
+				</div>
+				<div class="col-sm-5">
+					<div class="signup-form"><!--sign up form-->
+						<h2>New User Signup!</h2>
+						<form th:action="@{/auth/signup}" th:object="${user}" method="post">
+							<input type="text" placeholder="Username" th:field="*{username}"/>
+							<input type="email" placeholder="Email Address" th:field="*{customer.email}"/>
+							<input type="password" placeholder="Enter Password" th:field="*{password}"/>
+							<input type="password" placeholder="Enter Password Again" th:field="*{customer.name}"/>
+							<div th:if="${messageRegister}" class="alert alert-success text-center">
+								[[${messageRegister}]]
+							</div>
+							<button type="submit" class="btn btn-default">Signup</button>
+						</form>
+					</div><!--/sign up form-->
+				</div>
+			</div>
+		</div>
+	<div class="form-group" th:if="${remUsername}" hidden="hidden">
+		<label for="remUser"></label><input type="text" id="remUser" th:value="${remUsername}" />
+		<label for="remPassword"></label><input type="text" id="remPassword" th:value="${remPassword}">
+	</div>
+	</section><!--/form-->
+
+<footer th:replace="~{/fragments/footer}"></footer>
+<script type="text/javascript" th:src="@{/js/jquery.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.scrollUp.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/price-range.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.prettyPhoto.js}"></script>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+<script>
+	$("#remember").change(function() {
+		if(this.checked) {
+			$("#username").val($("#remUser").val())
+			$("#password").val($("#remPassword").val())
+		}
+	});
+</script>
+</body>
+</html>

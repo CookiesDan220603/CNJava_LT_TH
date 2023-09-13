@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="product1" class="org.example.Product" scope="prototype">
+        <property name="id" value="1" />
+        <property name="name" value="San pham 01" />
+        <property name="description" value="tuyet voi" />
+        <property name="price" value="10000" />
+    </bean>
+    <bean id="product2" class="org.example.Product" scope="prototype">
+        <constructor-arg ref="product1" />
+    </bean>
+    <bean id="product3" class="org.example.Product" scope="singleton">
+        <property name="name" value="San pham 03" />
+        <property name="id" value="1" />
+        <property name="price" value="10000" />
+        <property name="description" value="tuyet voi qua" />
+    </bean>
+</beans>

@@ -1,0 +1,13 @@
+package connection;
+
+import java.sql.SQLException;
+import com.mysql.cj.jdbc.Driver;
+
+public class JDBCUtils {
+	public static Connection getConnection() {
+		Connection con = null;
+		try {
+			DriverManager.regis
+		}
+	}
+}

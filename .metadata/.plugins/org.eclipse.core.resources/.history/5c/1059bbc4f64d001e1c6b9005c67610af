@@ -1,0 +1,25 @@
+package Test;
+
+import connection.JDBCUtil;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Lấy kết nối tới cơ sở dữ liệu MySQL bằng cách gọi phương thức từ JDBCUtil
+            Connection connection = JDBCUtil.getMySQLConnection("localhost", "qlsv", "root", "");
+
+            // Sử dụng kết nối tại đây
+            // ...
+            System.out.println(connection);
+
+            // Đóng kết nối sau khi sử dụng xong
+            connection.close();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

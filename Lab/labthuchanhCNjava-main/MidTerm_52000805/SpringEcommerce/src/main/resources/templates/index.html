@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<title>Home | E-Shopper</title>
+<head th:replace="~{/fragments/head}">
+</head><!--/head-->
+<style>
+	input[type=range] {
+		-webkit-appearance: none;
+	}
+
+	input[type=range]::-webkit-slider-runnable-track {
+		height: .35em;
+		background: #FE980F;
+		border: none;
+		border-radius: 3px;
+	}
+
+	input[type=range]::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		border: none;
+		height: 1.1em;
+		width: 1.1em;
+		border-radius: 50%;
+		background: #FE980F;
+		margin-top: -4px;
+	}
+</style>
+<body>
+	<header th:replace="~{/fragments/header}"></header>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<div class="brands_products"><!--brands_products-->
+							<h2>Brands</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li class="active"><a th:href="@{/home-page}" class="brand">All Brands</a></li>
+									<th:block th:each="brand : ${brands}">
+										<li><a th:href="@{'/home-page/brand/'+${brand.id}}" class="brand">[[${brand.name}]]</a></li>
+									</th:block>
+								</ul>
+							</div>
+						</div><!--/brands_products-->
+
+						<div class="price-range"><!--price-range-->
+							<h2>Price Range</h2>
+							<div class="well text-center">
+								<form method="post" th:action="@{/home-page/filter-price}">
+									<input th:if="${rangePrice}" type="range" style="color: #FE980F;" min="1" max="101" th:value="${rangePrice}" name="rangePrice" step="5" class="rangePrice" ><br />
+									<input th:unless="${rangePrice}" type="range" style="color: #FE980F;" min="1" max="101" name="rangePrice" step="5" class="rangePrice" ><br />
+									<b class="pull-left">$ 1</b> <b class="pull-right">$ 100</b>
+									<button type="submit" id="submit" hidden></button>
+								</form>
+							</div>
+						</div><!--/price-range-->
+					</div>
+				</div>
+				<div class="col-sm-9 padding-right">
+					<div class="category-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#All" data-toggle="tab">All Products</a></li>
+								<th:block th:each="category : ${categories}">
+									<li><a th:href="@{'#' + ${category.name}}" data-toggle="tab">[[${category.name}]]</a></li>
+								</th:block>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="All" >
+								<th:block th:each="product : ${products}">
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img th:src="@{'/images/shop/'+ ${product.image}}" alt=""  src=""/>
+													<h2>[[${product.name}]]</h2>
+													<p>Brand: [[${product.brand.name}]]</p>
+													<p>Category: [[${product.category.name}]]</p>
+													<p>Color: [[${product.color}]]</p>
+													<p>Cost: $[[${product.price}]]</p>
+													<a th:href="@{'/product/detail/'+${product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-expand"></i>Details</a>
+													<a th:href="@{'/cart/add/'+${product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</th:block>
+							</div>
+							<th:block th:each="category : ${categories}">
+								<div class="tab-pane fade in" th:id="${category.name}" >
+									<th:block th:each="product : ${products}">
+										<div th:if="${product.category.name.equals(category.name)}" class="col-sm-3">
+											<div class="product-image-wrapper">
+												<div class="single-products">
+													<div class="productinfo text-center">
+														<img th:src="@{'/images/shop/'+ ${product.image}}" alt=""  src=""/>
+														<h2>[[${product.name}]]</h2>
+														<p>Brand: [[${product.brand.name}]]</p>
+														<p>Category: [[${product.category.name}]]</p>
+														<p>Color: [[${product.color}]]</p>
+														<p>Cost: $[[${product.price}]]</p>
+														<a th:href="@{'/product/detail/'+${product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-expand"></i>Details</a>
+														<a th:href="@{'/cart/add/'+${product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</th:block>
+								</div>
+							</th:block>
+						</div>
+					</div><!--/category-tab-->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer th:replace="~{/fragments/footer}"></footer>
+    <script type="text/javascript" th:src="@{/js/jquery.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.scrollUp.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/price-range.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.prettyPhoto.js}"></script>
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+	<script>
+		$('.rangePrice').on('change', function() {
+			$('#submit').click()
+		});
+	</script>
+</body>
+</html>

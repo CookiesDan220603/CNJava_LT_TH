@@ -1,0 +1,1 @@
+testing exercise 3 of lab 6 of Java Technology

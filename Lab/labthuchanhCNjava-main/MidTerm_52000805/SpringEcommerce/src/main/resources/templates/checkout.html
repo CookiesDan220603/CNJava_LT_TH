@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<title>Checkout | E-Shopper</title>
+<head th:replace="~{/fragments/head}">
+</head><!--/head-->
+
+<body>
+	<header th:replace="~{/fragments/header}"></header>
+	<section id="cart_items">
+		<div class="container">
+			<div class="review-payment">
+				<h2>Review</h2>
+			</div>
+			<div class="table-responsive cart_info">
+				<table class="table table-condensed">
+					<thead>
+					<tr class="cart_menu">
+						<td>Name</td>
+						<td class="image">Image</td>
+						<td class="price">Price</td>
+						<td class="quantity">Quantity</td>
+						<td class="total">Total</td>
+					</tr>
+					</thead>
+					<tbody>
+					<th:block th:each="cart : ${carts}">
+						<tr>
+							<td>
+								[[${cart.name}]]
+							</td>
+							<td class="cart_product">
+								<img th:src="@{'/images/shop/'+ ${cart.image}}" alt=""  src=""/>
+							</td>
+							<td class="cart_price">
+								<p> $<span id="price">[[${cart.price}]]</span></p>
+							</td>
+							<td class="cart_quantity">
+								<div class="cart_quantity_button">
+									<input class="cart_quantity_input quantity" disabled type="number" name="quantity" th:value="${cart.quantity}" min="1" autocomplete="off" size="2">
+								</div>
+							</td>
+							<td class="cart_total">
+								<p class="cart_total_price"> $<span th:text="${#numbers.formatDecimal(cart.total, 0, 'COMMA', 2, 'POINT')}"></span></p>
+							</td>
+						</tr>
+					</th:block>
+					<tr>
+						<td colspan="4">&nbsp;</td>
+						<td colspan="1">
+							<table class="table table-condensed total-result">
+								<tr>
+									<td>Total</td>
+									<td>$<span th:text="${#numbers.formatDecimal(total, 0, 'COMMA', 2, 'POINT')}"></span></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					</tbody>
+					<tfoot>
+					<tr>
+						<td colspan="4">&nbsp;</td>
+						<td colspan="1">
+							<table class="table table-condensed total-result">
+								<tr>
+									<td>
+										<a th:href="@{/cart}" class="btn btn-default cart"><i class="fa fa-shopping-cart"></i> Back to cart</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					</tfoot>
+				</table>
+			</div>
+			<div class="shopper-informations">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="shopper-info">
+							<p>Customer Information & Order</p>
+							<form th:action="@{/check-out/order}" th:object="${customer}" method="post">
+								<input type="text" hidden th:field="*{id}" placeholder="ID">
+								<input type="text" th:field="*{name}" placeholder="Full Name">
+								<input type="text" th:field="*{phone}" placeholder="Phone Number">
+								<input type="text" th:field="*{email}" placeholder="Email">
+								<input type="text" th:field="*{address}" placeholder="Address">
+								<div th:if="${message}" class="alert alert-success text-center">
+									[[${message}]]
+								</div>
+								<div style="display: flex;justify-content: end">
+									<button type="submit" class="btn btn-primary fa fa-gift"> Order</button>
+								</div>
+							</form>
+
+							<br>
+							<hr>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> <!--/#cart_items-->
+	<footer id="footer"><!--Footer-->
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="https://github.com/RonaldodeLema">VanThao</a></span></p>
+				</div>
+			</div>
+		</div>
+
+	</footer><!--/Footer-->
+
+	<script type="text/javascript" th:src="@{/js/jquery.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.scrollUp.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/price-range.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.prettyPhoto.js}"></script>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<title>Cart | E-Shopper</title>
+<head th:replace="~{/fragments/head}">
+</head><!--/head-->
+<body>
+	<header th:replace="~{/fragments/header}"></header>
+	<section id="cart_items">
+		<div class="container">
+			<div class="table-responsive cart_info">
+				<table class="table table-striped">
+					<thead>
+						<tr class="cart_menu">
+							<td>Name</td>
+							<td class="image">Image</td>
+							<td class="price">Price</td>
+							<td class="quantity">Quantity</td>
+							<td class="total">Total</td>
+							<td></td>
+						</tr>
+					</thead>
+					<tbody>
+						<th:block th:each="cart : ${carts}">
+							<tr>
+								<td>
+									[[${cart.name}]]
+								</td>
+								<td class="cart_product">
+									<img th:src="@{'/images/shop/'+ ${cart.image}}" alt=""  src=""/>
+								</td>
+								<td class="cart_price">
+									<p> $<span id="price">[[${cart.price}]]</span></p>
+								</td>
+								<td class="cart_quantity">
+									<div class="cart_quantity_button">
+										<input class="cart_quantity_input quantity" type="number" th:id="${cart.product_id}" name="quantity" th:value="${cart.quantity}" min="1" autocomplete="off" size="2">
+									</div>
+								</td>
+								<td class="cart_total">
+									<p class="cart_total_price"> $<span th:text="${#numbers.formatDecimal(cart.total, 0, 'COMMA', 2, 'POINT')}"></span></p>
+								</td>
+								<td class="cart_delete">
+									<a class="cart_quantity_delete" th:href="@{'/cart/delete/'+${cart.id}}"><i class="fa fa-times"></i></a>
+								</td>
+							</tr>
+						</th:block>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<span>
+									<a th:href="@{/check-out}" class="btn btn-default cart"><i class="fa fa-credit-card"></i> Go to check out</a>
+								</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section> <!--/#cart_items-->
+
+	<footer th:replace="~{/fragments/footer}"></footer>
+
+	<script type="text/javascript" th:src="@{/js/jquery.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.scrollUp.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/price-range.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.prettyPhoto.js}"></script>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script>
+	<script>
+		$('.quantity').on('change', function() {
+			const quan = $(this).val()
+			const prod_id = $(this).attr("id")
+					$.ajax({
+						url: '/cart/add',
+						type: 'POST',
+						contentType: 'application/json',
+						data: JSON.stringify({
+							quantity: quan,
+							product_id: prod_id
+						}),
+						success: function (response) {
+							// handle successful response
+							location.reload()
+						},
+						error: function (error) {
+							// handle error response
+						}
+					});
+		});
+	</script>
+
+</body>
+</html>

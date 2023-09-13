@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define your beans here -->
+    <bean id="myPropertyProduct"
+        class="com.tdtu.lab06_ex01.Product"
+        scope="prototype">
+        <property name="id" value="P01" />
+        <property name="name" value="Iphone 14 Promax 1TB" />
+        <property name="description" value="Dynamic Island" />
+    </bean>
+
+    <bean id="myConstructorArgProduct"
+          class="com.tdtu.lab06_ex01.Product"
+          scope="prototype">
+        <constructor-arg name="id" value="P02"/>
+        <constructor-arg name="name" value="Apple Watch SE"/>
+        <constructor-arg name="description" value="2nd generation"/>
+    </bean>
+
+    <bean id="mySingletonProduct"
+          class="com.tdtu.lab06_ex01.Product"
+          scope="singleton">
+        <constructor-arg name="id" value="P03"/>
+        <constructor-arg name="name" value="Mac Studio"/>
+        <constructor-arg name="description" value="1st generation"/>
+    </bean>
+    
+    <bean id="mySingletonProduct1"
+          class="com.tdtu.lab06_ex01.Product"
+          scope="singleton">
+        <constructor-arg name="id" value="P04"/>
+        <constructor-arg name="name" value="Ipad Pro M2"/>
+        <constructor-arg name="description" value="Apple M2"/>
+    </bean>
+</beans>

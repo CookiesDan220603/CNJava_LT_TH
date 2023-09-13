@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<title>Search | E-Shopper</title>
+<head th:replace="~{/fragments/head}">
+</head><!--/head-->
+<body>
+	<header th:replace="~{/fragments/header}"></header>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Search Products</h2>
+						<th:block th:each="product : ${products}">
+							<div class="col-sm-4">
+								<div class="product-image-wrapper">
+									<div class="single-products">
+										<div class="productinfo text-center">
+											<img th:src="@{'/images/shop/'+ ${product.image}}" alt=""  src=""/>
+											<h2>[[${product.name}]]</h2>
+											<p>Brand: [[${product.brand.name}]]</p>
+											<p>Category: [[${product.category.name}]]</p>
+											<p>Cost: $[[${product.price}]]</p>
+											<a th:href="@{'/product/detail/'+${product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-expand"></i>Details</a>
+											<a th:href="@{'/cart/add/'+${product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</th:block>
+					</div><!--features_items-->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer th:replace="~{/fragments/footer}"></footer>
+
+	<script type="text/javascript" th:src="@{/js/jquery.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.scrollUp.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/price-range.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.prettyPhoto.js}"></script>
+	<script type="text/javascript" th:src="@{/js/main.js}"></script>
+</body>
+</html>
