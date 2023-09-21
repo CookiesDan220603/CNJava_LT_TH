@@ -44,6 +44,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="hibernate"/>
 			<item value="LT"/>
 			<item value="demo"/>
 		</list>
@@ -51,6 +52,7 @@
 			<item value="demo"/>
 		</list>
 		<list key="artifactId">
+			<item value="hibernate"/>
 			<item value="Baitap"/>
 			<item value="Ex"/>
 			<item value="demo"/>
