@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  product-server:
+    image: 'postgres:13.1-alpine'
+    container_name: product-server
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=sa
+      - POSTGRES_PASSWORD=abc123
+      - POSTGRES_DB=ProductManagement
