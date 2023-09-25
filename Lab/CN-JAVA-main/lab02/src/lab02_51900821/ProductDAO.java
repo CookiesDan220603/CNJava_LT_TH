@@ -89,8 +89,8 @@ public class ProductDAO implements Repository<Product, Integer> {
 			conn = getConnection();
 			conn.setAutoCommit(false);
 			statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-			statement.setNString(1, (String) item.getName());
-			statement.setInt(2, (Integer) item.getPrice());
+			statement.setNString(1, item.getName());
+			statement.setInt(2, item.getPrice());
 			statement.executeUpdate();
 			resultSet = statement.getGeneratedKeys();
 			if (resultSet.next()) {
