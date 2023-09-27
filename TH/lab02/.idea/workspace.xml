@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b764a3d-a124-4305-b162-106d782ba369" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex1/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/.idea/libraries/ex2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/ex2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/lib1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/lib17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/vn/edu/tdtu/ArrayHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/vn/edu/tdtu/ArrayHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/vn/edu/tdtu/ArrayOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex2/vn/edu/tdtu/ArrayOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex3/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex3/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex3/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex3/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex3/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/52100222_TruongThaiDanHuy/ex3/StudentUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1_4/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1_4/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1_4/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1_4/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1_4/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1_4/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1_4/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex1/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex1/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex1/ex1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/.idea/libraries/ex2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/ex2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/lib1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/lib17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/vn/edu/tdtu/ArrayHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/vn/edu/tdtu/ArrayHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/vn/edu/tdtu/ArrayOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex2/vn/edu/tdtu/ArrayOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/StudentUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/StudentUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/ex3/ex3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Docker/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab02_52100222/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab02_52100222/ProductDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab02_52100222/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab02_52100222/Repository.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2VjiA08fgAsuN81HEJ6rVo1wcxK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/CNjava/CNJava_LT_TH/TH/Lab_CNJAVA_52100222/lab02",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\CNjava\CNJava_LT_TH\TH\lab02\src\Docker" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Program">
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Program" />
+      <module name="lab02" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="src/Docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Program" />
+      <item itemvalue="Docker.Unnamed" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Program" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b764a3d-a124-4305-b162-106d782ba369" name="Changes" comment="" />
+      <created>1695355743560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695355743560</updated>
+    </task>
+    <servers />
+  </component>
+</project>
