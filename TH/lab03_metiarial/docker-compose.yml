@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  phone_factory:
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_DATABASE=PhoneFactory
+      - MYSQL_ROOT_PASSWORD=abc123
+    ports:
+      - '3306:3306'
+volumes:
+  db:
+    driver: local
