@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: huytr
+Build-Jdk: 21.0.1
+Implementation-Title: fashion
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: store
+Main-Class: ${start-class}
+
